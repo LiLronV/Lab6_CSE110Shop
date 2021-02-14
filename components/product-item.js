@@ -1,5 +1,5 @@
 // product-item.js
-let itemArr = Array.apply(null, Array(22)).map(function () {}); // taken from stackoverflow to create null array of size 22, there is no id 0.
+let itemArr = Array.apply(0, Array(22)).map(function () {}); // taken from stackoverflow to create null array of size 22, there is no id 0.
 let shadow;
 let cartNumber = document.getElementById('cart-count');
 let num = 0;
