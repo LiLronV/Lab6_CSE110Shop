@@ -19,7 +19,7 @@ for(let i = 0; i < data.length; i++){
    productItem.setAttribute('id', data[i].id);
    productList.appendChild(productItem);
     }
-
+console.log(itemArr);
     if (localStorage.getItem('cart')){
       cartObj = localStorage.getItem('cart');
       //console.log("pog");

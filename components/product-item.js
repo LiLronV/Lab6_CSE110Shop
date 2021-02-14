@@ -1,5 +1,5 @@
 // product-item.js
-let itemArr = Array.apply(0, Array(22)).map(function () {}); // taken from stackoverflow to create null array of size 22, there is no id 0.
+let itemArr = Array.apply(null, Array(22)).map(function () {}); // taken from stackoverflow to create null array of size 21
 let shadow;
 let cartNumber = document.getElementById('cart-count');
 let num = 0;
@@ -33,8 +33,7 @@ class ProductItem extends HTMLElement {
     button.textContent = 'Add to Cart';
     button.id = this.id;
         
-    button.onclick = function() {
-      itemArr = JSON.parse(localStorage.getItem('cart'));
+    button.onclick = function() { 
       if(button.textContent == 'Add to Cart'){
         button.textContent = 'Remove from Cart';
         itemArr[button.id] = 1;
