@@ -3,6 +3,10 @@ let productList;
 let productItem;
 let cartObj;
 
+let itemArr = Array.apply(0, Array(22)).map(function () {}); // taken from stackoverflow to create null array of size 21
+let cartNumber = document.getElementById('cart-count');
+
+
 localStorage = window.localStorage;
 window.addEventListener('DOMContentLoaded', () => {
   fetch('https://fakestoreapi.com/products')
